@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="16dp"
+		>
+
+		<LinearLayout
+			android:id="@+id/title_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="start"
+			android:paddingBottom="8dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/feladat_szerkesztese"
+				android:textSize="28sp"
+				android:textStyle="bold"
+				/>
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="2dp"
+				android:layout_weight="1"
+				android:background="@color/foreground"
+				android:layout_marginTop="28dp"
+				android:layout_marginStart="2dp"
+				/>
+		</LinearLayout>
+
+		<EditText
+			android:id="@+id/title_edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/feladat_neve"
+			android:textColor="@color/foreground"
+			android:textColorHint="@color/gray"
+			android:background="@drawable/edittext_border"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:layout_below="@id/title_layout"
+			android:inputType="text"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+			/>
+
+		<EditText
+			android:id="@+id/description_edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/feladat_leirasa"
+			android:minLines="4"
+			android:gravity="top"
+			android:layout_gravity="start"
+			android:textColor="@color/foreground"
+			android:textColorHint="@color/gray"
+			android:background="@drawable/edittext_border"
+			android:padding="8dp"
+			android:layout_below="@id/title_edittext"
+			android:inputType="textMultiLine"
+			/>
+
+		<LinearLayout
+			android:id="@+id/date_picker_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="start"
+			android:layout_below="@id/description_edittext"
+			android:layout_marginTop="16dp">
+
+			<ImageButton
+				android:id="@+id/date_picker_button"
+				android:layout_width="48dp"
+				android:layout_height="48dp"
+				android:src="@drawable/calendar_icon"
+				android:background="@color/background"
+				android:contentDescription="@string/datum_kivalaszto"
+				/>
+
+			<TextView
+				android:id="@+id/date_picker_text"
+				android:layout_width="wrap_content"
+				android:layout_height="48dp"
+				android:textSize="18sp"
+				android:text="@string/datum_nelkul"
+				android:gravity="center_vertical"
+				/>
+
+			<ImageButton
+				android:id="@+id/date_remove_button"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:src="@drawable/cancel"
+				android:background="@color/background"
+				android:contentDescription="@string/datum_torlese"
+				android:layout_gravity="center_vertical"
+				android:scaleType="fitCenter"
+				android:layout_marginStart="4dp"
+				android:visibility="gone"
+				/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/buttons_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentEnd="true"
+			android:layout_marginTop="16dp">
+
+			<Button
+				android:id="@+id/btnCancel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/megse"
+				android:background="@drawable/edittext_border"
+				/>
+
+			<Button
+				android:id="@+id/btnSave"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/mentes"
+				android:layout_marginStart="16dp"
+				android:background="@drawable/edittext_border"
+				/>
+		</LinearLayout>
+	</RelativeLayout>
+</ScrollView>

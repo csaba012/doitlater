@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/nav_graph"
+	app:startDestination="@id/listFragment">
+
+	<fragment
+		android:id="@+id/listFragment"
+		android:name="hu.pcsaba.android.doitlater.fragments.ListFragment"
+		android:label="fragment_list"
+		tools:layout="@layout/fragment_list" >
+		<action
+			android:id="@+id/action_listFragment_to_newItemFragment"
+			app:destination="@id/newItemFragment"
+			app:enterAnim="@anim/slide_up"
+			app:popEnterAnim="@anim/slide_up" />
+		<action
+			android:id="@+id/action_listFragment_to_editItemFragment"
+			app:destination="@id/editItemFragment"
+			app:enterAnim="@anim/slide_up"
+			app:popEnterAnim="@anim/slide_up" />
+	</fragment>
+	<fragment
+		android:id="@+id/newItemFragment"
+		android:name="hu.pcsaba.android.doitlater.fragments.NewItemFragment"
+		android:label="fragment_new_item"
+		tools:layout="@layout/fragment_new_item" >
+		<action
+			android:id="@+id/action_newItemFragment_to_listFragment"
+			app:destination="@id/listFragment"
+			app:enterAnim="@anim/slide_down"
+			app:popEnterAnim="@anim/slide_down" />
+		<action
+			android:id="@+id/action_newItemFragment_to_datePickerDialogFragment"
+			app:destination="@id/datePickerDialogFragment" />
+	</fragment>
+	<dialog
+		android:id="@+id/datePickerDialogFragment"
+		android:name="hu.pcsaba.android.doitlater.fragments.DatePickerDialogFragment"
+		android:label="DatePickerDialogFragment" />
+	<fragment
+		android:id="@+id/listDeletedFragment"
+		android:name="hu.pcsaba.android.doitlater.fragments.ListDeletedFragment"
+		android:label="fragment_list_deleted"
+		tools:layout="@layout/fragment_list_deleted" >
+		<action
+			android:id="@+id/action_listDeletedFragment_to_editDeteledItemFragment"
+			app:destination="@id/editDeteledItemFragment"
+			app:enterAnim="@anim/slide_up"
+			app:popEnterAnim="@anim/slide_up" />
+	</fragment>
+	<fragment
+		android:id="@+id/editItemFragment"
+		android:name="hu.pcsaba.android.doitlater.fragments.EditItemFragment"
+		android:label="fragment_edit_item"
+		tools:layout="@layout/fragment_edit_item" >
+		<argument
+			android:name="item"
+			app:argType="long" />
+		<action
+			android:id="@+id/action_editItemFragment_to_listFragment"
+			app:destination="@id/listFragment"
+			app:enterAnim="@anim/slide_down"
+			app:popEnterAnim="@anim/slide_down" />
+		<action
+			android:id="@+id/action_editItemFragment_to_datePickerDialogFragment"
+			app:destination="@id/datePickerDialogFragment" />
+	</fragment>
+	<fragment
+		android:id="@+id/editDeteledItemFragment"
+		android:name="hu.pcsaba.android.doitlater.fragments.EditDeletedItemFragment"
+		android:label="fragment_edit_deteled_item"
+		tools:layout="@layout/fragment_edit_deleted_item" >
+		<action
+			android:id="@+id/action_editDeteledItemFragment_to_datePickerDialogFragment"
+			app:destination="@id/datePickerDialogFragment" />
+		<action
+			android:id="@+id/action_editDeteledItemFragment_to_listDeletedFragment"
+			app:destination="@id/listDeletedFragment"
+			app:enterAnim="@anim/slide_down"
+			app:popEnterAnim="@anim/slide_down" />
+	</fragment>
+</navigation>

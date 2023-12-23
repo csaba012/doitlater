@@ -1,0 +1,24 @@
+<resources>
+	<string name="app_name">Do It Later</string>
+	<string name="teendok">Teendők</string>
+	<string name="torolt_teendok">Törölt teendők</string>
+	<string name="open">Kinyitás</string>
+	<string name="close">Bezárás</string>
+	<string name="feladat_hozzaadasa">Feladat hozzáadása</string>
+	<string name="feladat_neve">Feladat neve</string>
+	<string name="feladat_leirasa">Feladat leírása</string>
+	<string name="datum_nelkul">Dátum nélkül</string>
+	<string name="datum_kivalaszto">Dátum kiválasztó</string>
+	<string name="megse">Mégse</string>
+	<string name="mentes">Mentés</string>
+	<string name="feladat_szerkesztese">Feladat szerkesztése</string>
+	<string name="datum_torlese">Dátum törlése</string>
+	<string name="kozeljovoben">Közeljövőben</string>
+	<string name="ma_datummal">Ma, %1$s</string>
+	<string name="holnap_datummal">Holnap, %1$s</string>
+	<string name="feladat">Feladat</string>
+	<string name="leiras">Leírás</string>
+	<string name="datum_placeholder">11.02</string>
+	<string name="mai">Mai</string>
+	<string name="cim_nelkul">(Cím nélkül)</string>
+</resources>

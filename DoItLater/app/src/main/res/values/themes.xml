@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<!-- Base application theme. -->
+	<style name="Base.Theme.DoItLater" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your light theme here. -->
+		<item name="colorPrimary">@color/background_header</item>
+		<item name="colorPrimaryVariant">@color/background_header</item>
+		<item name="android:textColor">@color/foreground</item>
+		<item name="android:textColorPrimary">@color/foreground</item>
+		<item name="titleTextColor">@color/foreground</item>
+		<item name="android:windowBackground">@color/background</item>
+		<item name="drawerArrowStyle">@style/Drawer</item>
+
+		<item name="android:itemTextAppearance">@color/foreground</item>
+		<item name="colorOnSecondary">@color/foreground</item>
+		<item name="colorOnSurface">@color/foreground</item>
+		<item name="colorOnContainer">@color/foreground</item>
+
+		<item name="colorAccent">@color/background_header</item>
+		<item name="colorControlActivated">@color/orange</item>
+	</style>
+
+	<style name="Drawer" parent="Widget.AppCompat.DrawerArrowToggle">
+		<item name="color">@color/foreground</item>
+	</style>
+
+	<style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+		<item name="android:windowBackground">@color/background</item>
+		<item name="colorAccent">@color/background_header</item>
+		<item name="colorControlActivated">@color/orange</item>
+		<item name="android:textColorPrimary">@color/foreground</item>
+		<item name="android:textColorSecondary">@color/foreground</item>
+		<item name="android:textColorPrimaryInverse">@color/foreground</item>
+		<item name="android:textColorSecondaryInverse">@color/foreground</item>
+	</style>
+
+	<style name="Theme.DoItLater.Starting" parent="Theme.SplashScreen">
+		<item name="windowSplashScreenBackground">@color/background</item>
+		<item name="windowSplashScreenAnimatedIcon">@drawable/logo_teljes</item>
+		<item name="android:windowSplashScreenIconBackgroundColor">@color/background</item>
+		<item name="postSplashScreenTheme">@style/Theme.DoItLater</item>
+	</style>
+
+	<style name="Theme.DoItLater" parent="Base.Theme.DoItLater" />
+</resources>
